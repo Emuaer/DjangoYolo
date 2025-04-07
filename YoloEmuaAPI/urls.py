@@ -5,7 +5,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.static import serve
 urlpatterns = [
-    path('upload/', UploadImageView.as_view(), name='upload-image'),
     path('', views.index, name='index'),
     path('results/', UploadImageView_emua.as_view(), name='results'),
     path(r'media/(?P<path>.*)', serve,{'document_root': settings.MEDIA_ROOT}),
